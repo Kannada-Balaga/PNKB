@@ -89,9 +89,9 @@ h1 {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid #555;
-  margin-left: 1rem;
+  /*margin-left: 1rem;*/
   
-  font-size: clamp(1.8vw, 2.6vw, 2.8vw); /* Slightly larger than base */  
+  font-size: clamp(2.2vw, 2.6vw, 2.8vw); /* Slightly larger than base */  
 }
 
 /* Hover effect on each buttons */
@@ -404,7 +404,7 @@ footer {
     padding: 6px 10px;
     white-space: nowrap; /* Prevent wrapping */
 	font-size: clamp(1.2vw, 1.4vw, 1.6vw);
-	
+	margin-left: 1rem;
 	background-image: linear-gradient(to right, #1e3c72, #2a5298);
 	border-radius: 30px;
   }
@@ -523,4 +523,5 @@ footer {
     }
   
 }
+
 
