@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Namma Kannada Balaga</title>
+  <link rel="icon" href="Images/Common/logo.jpg" type="image/jpg">
+  <link rel="stylesheet" href="style.css" />
+  <script src="include.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Gallery</h1>
+
+      <div class="gallery-event">
+        <div class="gallery-title">Event 1: Ugadi 2024</div>
+        <div class="gallery-slider" data-event="1">
+          <button class="gallery-nav left" onclick="slideImage(1, -1)">&#10094;</button>
+          <img src="Images/Gallery/Ugadi2024/img1.jpg" class="active" />
+          <img src="Images/Gallery/Ugadi2024/img2.png" />
+          <button class="gallery-nav right" onclick="slideImage(1, 1)">&#10095;</button>
+        </div>
+      </div>
+
+      <div class="gallery-event">
+        <div class="gallery-title">Event 2: Rajyotsava 2024</div>
+        <div class="gallery-slider" data-event="2">
+          <button class="gallery-nav left" onclick="slideImage(2, -1)">&#10094;</button>
+          <img src="Images/Gallery/Rajyotsava2024/img1.jpg" class="active" />
+          <img src="Images/Gallery/Rajyotsava2024/img2.png" />
+          <button class="gallery-nav right" onclick="slideImage(2, 1)">&#10095;</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    const currentIndex = {};
+
+    function slideImage(eventId, direction) {
+      const slider = document.querySelector('.gallery-slider[data-event="' + eventId + '"]');
+      const images = slider.querySelectorAll('img');
+      if (!(eventId in currentIndex)) currentIndex[eventId] = 0;
+
+      images[currentIndex[eventId]].classList.remove('active');
+      currentIndex[eventId] = (currentIndex[eventId] + direction + images.length) % images.length;
+      images[currentIndex[eventId]].classList.add('active');
+    }
+  </script>
+</body>
+</html>
