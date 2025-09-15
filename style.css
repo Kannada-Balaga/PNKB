@@ -103,11 +103,11 @@ h1 {
 
 
 .hero-section {
-  /*background-image: url('Images/Common/hero_image.png'); /* Replace with your actual image path */
-  background-image: url('Images/Common/Background_Image.png');
+  background-image: url('Images/Common/Background_Image_Mobile.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  object-fit: cover;
   min-height: 98vh; /* Adjust to match your footer height */
   display: flex;
   align-items: center;
@@ -138,8 +138,8 @@ h1 {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 90%;
-  padding-top: 15vh;
+  max-width: 95%;
+  padding-top: 5vh;
 }
 
 	.hero-section h2{
@@ -173,7 +173,7 @@ h1 {
   line-height: 1.6;
   text-align: left; 
   position: relative;
-  margin-right: 44vw;
+  margin-right: 10vw;
 
 }
 
@@ -209,9 +209,10 @@ h1 {
   z-index: 2;
   max-width: 90%;
   font-family: 'Baloo Tamma 2';
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   margin-top: 40px; /* Adds space between the two sections */
 }
+
 
 
 /*The below Styling is for Event HTML*/
@@ -364,10 +365,19 @@ footer {
 	}
 
 	.hero-section {
+	  background-image: url('Images/Common/Background_Image.png');
+	  background-size: cover;
 	  overflow: hidden;
 	  width: 97%; height: 98%;
 	}
-  
+	
+	.hero-content {
+	  position: relative;
+	  z-index: 2;
+	  max-width: 90%;
+	  padding-top: 15vh;
+	}
+	  
 
   .menu-toggle {
     display: none;
@@ -407,7 +417,24 @@ footer {
 	  transform: scale(1.05);
 	}
 
+	
+	.inspirational-quote-box {
+	  /*background: linear-gradient(45deg, #FFD700, #FFD700,#FF9933,#FF0000, #FF0000);*/
+	  background: transparent;
+	  border-radius: 20px;
+	  padding: 10px;
+	  margin: 2px auto;
+	  max-width: 700px;
+	  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	  font-weight: bold;
+	  color: #2c2c2c;
+	  line-height: 1.6;
+	  text-align: left; 
+	  position: relative;
+	  margin-right: 44vw;
 
+	}
+	
 	.hero-section h2{
 		font-weight: bold;
 		color: #222;
@@ -418,6 +445,16 @@ footer {
 		font-weight: bold;
 		color: #222;
 		
+	}
+	
+		
+	.hero-content2 {
+	  position: relative;
+	  z-index: 2;
+	  max-width: 90%;
+	  font-family: 'Baloo Tamma 2';
+	  font-size: 1.2rem;
+	  margin-top: 40px; /* Adds space between the two sections */
 	}
 
 
